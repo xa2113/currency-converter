@@ -1,12 +1,15 @@
 package com.eileen.currencyconverter.logic.responsitories;
 
-import com.eileen.currencyconverter.logic.models.Currency;
+import com.eileen.currencyconverter.logic.models.CurrentCurrency;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository("currencyRepository")
-public interface CurrencyRepository{
+public interface CurrencyRepository extends CrudRepository<CurrentCurrency, String> {
 
-    List<Currency> findAll();
+    @Override
+    List<CurrentCurrency> findAll();
+
 }
