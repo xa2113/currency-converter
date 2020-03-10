@@ -1,6 +1,6 @@
-package com.eileen.currencyconverter.controllers;
+package com.eileen.currencyconverter.presentation.controllers;
 
-import com.eileen.currencyconverter.services.CurrencyService;
+import com.eileen.currencyconverter.logic.services.CurrencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +13,7 @@ public class CurrencyConverterController {
 
     @GetMapping("/currencies")
     public String getCurrencies() {
-        return currencyService.getCurrencyString();
+        currencyService.getCurrencyString();
+        return "index.html";
     }
 }
