@@ -1,14 +1,19 @@
 package com.eileen.currencyconverter.logic.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.redis.core.RedisHash;
+
+@RedisHash("Currency")
 public class Currency {
 
+    @Id
     private String name;
     private double valueInEUR;
 
     public Currency(){
     }
 
-    public Currency(String name, double valueInEUR){
+    public Currency(String name, double valueInEUR) {
         this.name = name;
         this.valueInEUR = valueInEUR;
     }

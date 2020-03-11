@@ -8,6 +8,7 @@ import java.util.Map;
 @RedisHash("CurrencyDTO")
 public class CurrencyDTO implements Serializable {
 
+    private String id;
     private String base;
     private String date;
     private Map<String, Double> rates;
@@ -15,10 +16,19 @@ public class CurrencyDTO implements Serializable {
     public CurrencyDTO(){
     }
 
-    public CurrencyDTO(String base, String date, Map<String, Double> rates) {
+    public CurrencyDTO(String id, String base, String date, Map<String, Double> rates) {
+        this.id = id;
         this.base = base;
         this.date = date;
         this.rates = rates;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getBase() {
