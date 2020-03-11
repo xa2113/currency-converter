@@ -5,17 +5,17 @@ import org.springframework.data.redis.core.RedisHash;
 import java.io.Serializable;
 import java.util.Map;
 
-@RedisHash("CurrentCurrency")
-public class CurrentCurrency implements Serializable {
+@RedisHash("CurrencyDTO")
+public class CurrencyDTO implements Serializable {
 
     private String base;
     private String date;
     private Map<String, Double> rates;
 
-    public CurrentCurrency(){
+    public CurrencyDTO(){
     }
 
-    public CurrentCurrency(String base, String date, Map<String, Double> rates) {
+    public CurrencyDTO(String base, String date, Map<String, Double> rates) {
         this.base = base;
         this.date = date;
         this.rates = rates;
@@ -47,7 +47,7 @@ public class CurrentCurrency implements Serializable {
 
     @Override
     public String toString() {
-        return "CurrentCurrency{" +
+        return "CurrencyDTO{" +
                 "base='" + base + '\'' +
                 ", date='" + date + '\'' +
                 ", rates=" + rates +

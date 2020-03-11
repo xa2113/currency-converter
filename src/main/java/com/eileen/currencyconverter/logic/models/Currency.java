@@ -3,14 +3,14 @@ package com.eileen.currencyconverter.logic.models;
 public class Currency {
 
     private String name;
-    private double valueInUSD;
+    private double valueInEUR;
 
     public Currency(){
     }
 
-    public Currency(String name, double valueInUSD){
+    public Currency(String name, double valueInEUR){
         this.name = name;
-        this.valueInUSD = valueInUSD;
+        this.valueInEUR = valueInEUR;
     }
 
     public String getName() {
@@ -21,19 +21,19 @@ public class Currency {
         this.name = name;
     }
 
-    public double getValueInUSD() {
-        return valueInUSD;
+    public double getValueInEUR() {
+        return valueInEUR;
     }
 
-    public void setValueInUSD(double valueInUSD) {
-        this.valueInUSD = valueInUSD;
+    public void setValueInEUR(double valueInEUR) {
+        this.valueInEUR = valueInEUR;
     }
 
     @Override
     public String toString() {
         return "Currency{" +
                 "name='" + name + '\'' +
-                ", valueInUSD=" + valueInUSD +
+                ", valueInEUR=" + valueInEUR +
                 '}';
     }
 }
